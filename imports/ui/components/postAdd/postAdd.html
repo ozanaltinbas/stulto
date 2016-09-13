@@ -1,0 +1,38 @@
+<div class="row">
+    <form class="col s12" ng-submit="$event.preventDefault();postAdd.sendPost(newPostForm);"
+        id="newPostForm" name="newPostForm" novalidate>
+        <div class="row">
+            <div class="input-field col s12 m3">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="nickname" type="text" name="nickname"
+                       ng-model="postAdd.nickname"
+                       required
+                       ng-minlength="3"
+                       ng-maxlength="30">
+                <label for="nickname">{{ 'nickname' | translate }}</label>
+                <div ng-messages="newPostForm.nickname.$error" ng-if="newPostForm.nickname.$invalid && (newPostForm.nickname.$dirty || newPostForm.$submitted)" class="red-text">
+                    <p ng-message="required">Rumuz giriniz.</p>
+                    <p ng-message="minlength">Rumuz en az 3 karakter uzunluğunda olmalıdır.</p>
+                    <p ng-message="maxlength">Rumuz en fazla 30 karakter uzunluğunda olabilir.</p>
+                </div>
+            </div>
+            <div class="input-field col s12 m9">
+                <i class="material-icons prefix">comment</i>
+                <input id="message" type="text" name="message"
+                       ng-model="postAdd.message"
+                       required
+                       ng-minlength="5"
+                       ng-maxlength="750">
+                <label for="message">{{ 'message' | translate }}</label>
+                <div ng-messages="newPostForm.message.$error" ng-if="newPostForm.message.$invalid && (newPostForm.message.$dirty || newPostForm.$submitted)" class="red-text">
+                    <p ng-message="required">Mesaj giriniz.</p>
+                    <p ng-message="minlength">Mesajınız en az 5 karakter uzunluğunda olmalıdır.</p>
+                    <p ng-message="maxlength">Mesajınız en fazla 750 karakter uzunluğunda olabilir.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m3">
+            <button class="btn waves-effect waves-light col s12" type="submit">{{ 'SEND' | translate }}</button>
+        </div>
+    </form>
+</div>

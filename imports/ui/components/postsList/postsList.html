@@ -1,0 +1,8 @@
+<search-bar searchtext="postsList.searchText"></search-bar>
+<post-add></post-add>
+<ul class="collection hoverable" infinite-scroll="postsList.incrementLimit()" infinite-scroll-distance="1">
+    <li class="collection-item" class="no-pad;" style="line-height: 1rem; margin: 0px;" ng-repeat="post in postsList.posts" data-collapsible="accordion">
+        <p style="font-weight: bold"><span class="badge"><created-at time="post.createdAt"></created-at>&nbsp;&nbsp;#{{ post.seq }}</span>{{ post.nickname }}</p>
+        <p>&nbsp;&nbsp;&nbsp;{{ post.content }}</p>
+    </li>
+</ul>
