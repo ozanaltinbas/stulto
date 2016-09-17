@@ -1,3 +1,4 @@
+<loader status="postAdd.loadedStatus"></loader>
 <div class="row">
     <form class="col s12" ng-submit="$event.preventDefault();postAdd.sendPost(newPostForm);"
         id="newPostForm" name="newPostForm" novalidate>
@@ -34,5 +35,10 @@
         <div class="col s12 m3">
             <button class="btn waves-effect waves-light col s12" type="submit">{{ 'SEND' | translate }}</button>
         </div>
+        <div class="col s12 m3">
+            <div vc-recaptcha key="'6Lc48QYUAAAAAEpE6hdwxmdfMscHYteeRm_LWHeH'" size="normal"
+                 ng-if="postAdd.displayCaptcha"></div>
+        </div>
     </form>
 </div>
+<script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
