@@ -14,7 +14,6 @@ if (Meteor.isServer) {
         content : 1,
         indexContent : 1,
         createdAt : 1,
-        ipAddress : 0,
         seq : 1
       }
     };
