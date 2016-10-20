@@ -21,7 +21,7 @@ class PostsList {
             createdAt: this.createdAt
         };
         this.searchText = '';
-        this.limit = 50;
+        this.limit = 10;
 
         this.subscribe('posts', () => [{
             limit: this.getReactively('limit'),
@@ -40,7 +40,7 @@ class PostsList {
     }
 
     incrementLimit () {
-        this.limit += 20;
+        this.limit += 10;
     }
 }
 

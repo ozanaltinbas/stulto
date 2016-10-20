@@ -17,7 +17,7 @@
                     <p ng-message="maxlength">Rumuz en fazla 30 karakter uzunluğunda olabilir.</p>
                 </div>
             </div>
-            <div class="input-field col s12 m9">
+            <div class="input-field col s12 m7">
                 <i class="material-icons prefix">comment</i>
                 <input id="message" type="text" name="message"
                        ng-model="postAdd.message"
@@ -31,9 +31,9 @@
                     <p ng-message="maxlength">Mesajınız en fazla 750 karakter uzunluğunda olabilir.</p>
                 </div>
             </div>
-        </div>
-        <div class="col s12 m3">
-            <button class="btn waves-effect waves-light col s12" type="submit">{{ 'SEND' | translate }}</button>
+            <div class="input-field col s12 m2">
+                <button class="btn waves-effect waves-light col s12" type="submit">{{ 'SEND' | translate }}</button>
+            </div>
         </div>
         <div class="col s12 m3">
             <div vc-recaptcha key="'6Lc48QYUAAAAAEpE6hdwxmdfMscHYteeRm_LWHeH'" size="normal"

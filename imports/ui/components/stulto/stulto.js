@@ -11,6 +11,7 @@ import template from './stulto.html';
 
 import { name as Navigation } from '../navigation/navigation';
 import { name as Home } from '../home/home';
+import { name as BackToTop } from '../backToTop/backToTop';
 
 class Stulto {
     constructor($scope, $reactive) {
@@ -29,7 +30,8 @@ export default angular.module(name, [
     'pascalprecht.translate',
     'ui.materialize',
     Navigation,
-    angularMoment
+    angularMoment,
+    BackToTop
 ]).component(name, {
     template,
     controllerAs: name,
